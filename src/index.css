@@ -303,16 +303,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* ----------------------------------*/
-
-.footer {
-  padding: 2rem;
-  text-align: center;
-  color: var(--muted);
-}
-
-/* ----------------------------------*/
-
 .tags {
   margin: 0.75rem 0;
   display: flex;
@@ -327,6 +317,56 @@ body {
   border-radius: 999px;
   background: rgba(99, 102, 241, 0.15);
   color: var(--primary);
+}
+
+.card-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.btn-github {
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  transition: 0.3s;
+}
+
+.btn-github:hover {
+  transform: translateY(-2px);
+}
+
+.btn-visualizar {
+  background-color:#61dafb;
+  color: #0b1418;
+  text-decoration: none;
+  border-radius: 999px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  transition: 0.3s;
+}
+
+.btn-visualizar:hover {
+  background-color: #52c0e8;
+  transform: translateY(-2px);
+}
+
+/* ----------------------------------*/
+
+.footer {
+  padding: 2rem;
+  text-align: center;
+  color: var(--muted);
 }
 
 /* ----------------------------------*/
@@ -393,6 +433,7 @@ body {
 
 .contact {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .contact-subtitle {

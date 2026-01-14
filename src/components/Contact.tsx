@@ -11,7 +11,7 @@ export default function Contact() {
 
       <div className="contact-email">
         <FiMail />
-        <span>geralotavio@hotmail.com</span>
+        <span>geraotavio@hotmail.com</span>
       </div>
 
       <div className="contact-grid">

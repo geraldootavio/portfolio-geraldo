@@ -7,6 +7,7 @@ interface Project {
   description: string;
   html_url: string;
   topics: string[];
+  homepage?: string;
 }
 
 const FEATURED = [
@@ -14,7 +15,7 @@ const FEATURED = [
   "TrabalhoIA-IFMG",
   "feirakit-frontend",
   "chatOnline",
-  "TelaLogin",
+  "ProjectDiscoverRCS",
 ];
 
 const PROJECT_DESCRIPTIONS: Record<string, string> = {
@@ -25,8 +26,13 @@ const PROJECT_DESCRIPTIONS: Record<string, string> = {
     "Aplicação para organização de compras em feiras livres.",
   chatOnline:
     "Sistema simples de chat online utilizando tecnologias web.",
-  TelaLogin:
-    "Tela de login responsiva com foco em UI/UX e validações.",
+  ProjectDiscoverRCS:
+    "Agregador de links pessoais inspirado no Discover da Rocketseat.",
+};
+
+const PROJECT_DEMOS: Record<string, string> = {
+  "TrabalhoIA-IFMG": "https://ods2-site.web.app/",
+  ProjectDiscoverRCS: "https://geraldootavio.github.io/ProjectDiscoverRCS/",
 };
 
 export default function Projects() {
@@ -83,14 +89,29 @@ export default function Projects() {
               ))}
             </div>
 
-            <a
-              href={project.html_url}
-              target="_blank"
-              rel="noreferrer"
-              className="btn"
-            >
-              Ver no GitHub
-            </a>
+            {/* Botões */}
+            <div className="card-buttons">
+              {(project.name === "TrabalhoIA-IFMG" ||
+                project.name === "ProjectDiscoverRCS") && (
+                  <a
+                    href={PROJECT_DEMOS[project.name] ?? "#"}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn btn-visualizar"
+                  >
+                    Visualizar
+                  </a>
+                )}
+
+              <a
+                href={project.html_url}
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-github"
+              >
+                Ver no GitHub
+              </a>
+            </div>
           </motion.div>
         ))}
       </div>
