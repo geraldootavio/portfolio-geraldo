@@ -3,7 +3,7 @@ name: Deploy React Vite to Firebase Hosting
 on:
   push:
     branches:
-      - main  # ou a branch que você usa
+      - main
 
 jobs:
   build_and_deploy:
@@ -26,5 +26,5 @@ jobs:
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseProjectId: portfolio-geraldootavio
+          projectId: portfolio-geraldootavio
           channelId: live
