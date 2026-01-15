@@ -1,6 +1,7 @@
 :root {
   --bg: #0f172a;
-  --bg-soft: #020617;
+  --bg-soft: #1e0b12;
+  /* vermelho escuro mais perceptível */
   --text: #e5e7eb;
   --muted: #94a3b8;
   --primary: #6366f1;
@@ -18,10 +19,18 @@ html {
 }
 
 body {
-  font-family: "Inter", system-ui, sans-serif;
-  background: linear-gradient(180deg, var(--bg), var(--bg-soft));
-  color: var(--text);
+  background:
+    radial-gradient(800px 400px at 15% -10%,
+      rgba(99, 102, 241, 0.18),
+      transparent 45%),
+    radial-gradient(700px 350px at 85% 10%,
+      rgba(99, 102, 241, 0.12),
+      transparent 40%),
+    linear-gradient(180deg,
+      var(--bg),
+      var(--bg-soft));
 }
+
 
 /* HEADER BASE */
 .header {
@@ -104,7 +113,16 @@ body {
   left: auto;
   height: 100vh;
   width: 280px;
-  background: #0b1418;
+
+  background:
+    linear-gradient(180deg,
+      var(--bg) 0%,
+      var(--bg-soft) 100%),
+    radial-gradient(400px 200px at 100% 0%,
+      rgba(99, 102, 241, 0.12),
+      transparent 60%);
+
+
   padding: 2rem;
   transform: translateX(100%);
   transition: transform 0.35s ease;
@@ -265,6 +283,7 @@ body {
 .section h2 {
   margin-bottom: 2rem;
   font-size: 2rem;
+  color: white;
 }
 
 .grid {
@@ -279,6 +298,7 @@ body {
   border-radius: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.05);
   transition: 0.3s;
+  color: rgb(255, 255, 255);
 }
 
 .card:hover {
@@ -293,7 +313,7 @@ body {
   justify-content: center;
   align-items: center;
   background: var(--primary);
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   border-radius: 999px;
   transition: 0.3s;
@@ -315,7 +335,7 @@ body {
   font-size: 0.75rem;
   padding: 0.3rem 0.6rem;
   border-radius: 999px;
-  background: rgba(99, 102, 241, 0.15);
+  background: rgba(119, 121, 245, 0.15);
   color: var(--primary);
 }
 
@@ -344,7 +364,7 @@ body {
 }
 
 .btn-visualizar {
-  background-color:#61dafb;
+  background-color: #61dafb;
   color: #0b1418;
   text-decoration: none;
   border-radius: 999px;
